@@ -1,9 +1,39 @@
+* {/* Catch all selector - style applies to all elements */
+    font-family: 'Inter', sans-serif; /* Modern font */
+
+}
 body {
+
     background-color: #121212;
     color: white;
     font-family:'Inter', sans-serif;
+    margin: 10px auto;
+    padding: 20px;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #282828;
+}
+
+img {
+    width: 150px; /* Smaller logo */
+}
+
+#container {
+    width: auto;
+    max-width: 12000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+leg {
+    width: 150px;
 }
 .title {
+    font-size: 2.5rem;
     color: #1ED760;
     font-size: 2.5rem;
 }
@@ -11,14 +41,129 @@ img {
     width: 150px;
 }
 
-.info-section h2 {
-    font-size: 1.8 ram;
+.info-section, .result-section { /* Select multiple classes */
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1E1E1E; /* Darker section background */
+    border-radius: 10px; /* Curved corners */
 }
 
-.info-section p {
-    color: #282828;
+.info-section h2, .result-section h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
 }
 
-.info-section ul {
-    list-style: none;
+.info-section p { /* Select <p> tags within an element with the "info-section" class */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #B3B3B3; /* Lighter text for paragraphs */
 }
+
+.right-container ul {
+    list-style: none; /* Remove bullets */
+    padding-left: 0;
+}
+
+.right-container li {
+    margin-bottom: 8px;
+    color: #B3B3B3;
+}
+
+
+.result-section {
+    background-color: #1e1e1e;
+
+    /*
+    padding helps us create space for the section so it doesn't look as clustered
+    border-radius helps give our section character by rounding out the corners
+    margin-bottom helps us create space from the content below
+    */
+
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px ;
+
+}
+
+/* to select any elemtn with an ID we can use hashtag
+*/
+
+#result-container {
+    text-align: center;
+}
+
+.result-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.spotify-button, select.spotify-button, .result-button {
+    background-color: black; /* Black background */
+    color: #1DB954; /* Spotify green text */
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    border-radius: 25px; /* More rounded buttons */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    appearance: none; /* Reset default appearance */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+}
+
+.spotify-button:hover, select.spotify-button:hover {
+    background-color: #1ED760;
+    color: black; /* Go black on hover */
+}
+
+#result {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.result-card {
+    background-color: #282828;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.result-intro-text {
+    font-size: 1.1rem;
+    font-weight: 300 ;
+    /*lower values on font-weight are thin, higher are more bold */
+    margin-bottom: 10px;
+
+}
+
+footer {
+    background-color: #1E1E1E; /* Footer background same as sections */
+    padding: 20px;
+    border-top: 1px solid #282828; /* Subtle border */
+    margin-top: 40px;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    display: flex; /* Change element to flex box */
+    justify-content: center; /* Center social links */
+    gap: 30px; /* Spacing between links */
+    font-size: 0.9rem;
+}
+
+.social-links li a {
+    color: #B3B3B3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+    color: white; /* White on hover */
+}
+

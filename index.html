@@ -1,61 +1,93 @@
-
+<!--DOCTYPE-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Visualizer</title>
+    <link rel="stylesheet" href="style.css">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAA
     AAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAhMRoAAAAAABkgGQAUExkAYdkeABQUGQBh2h4ARpUcAFzNHgBf1B4AExA
     ZAFnFHQAzZRsAYNceAAAAAAAAAAAAERERERERERERER3d3dEREREd3d3d3dEREd3d3d3d3RER3d3d3d3dER3dWd3
     FXd3RHd3bIE3Y3dEd3X3d01Xd0R3dVVVa3d3RHd3d3d1lXdEd1VVVVVXd0RHd3d3d3d0REd3d3d3d3RERHd3d3d3
     RERERHd3d0RERERERERERERH//wAA+B8AAOAHAADAAwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMADAADAAwAA4AcAAPgfAAD//wAA"
-    rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="Style.css">
+    rel="icon" type="image/x-icon"> <!--Favicon-->
+    <title>Spotify Data Visualizer</title>
 </head>
-<body>
-    
-     <header>
-    
+<body id="container">
+    <!--Concepts included:
+        HTML tags
+            Text
+            Lists
+            Images
+            Links
+            Footer
+            Div/Header/Section containers
+        CSS selectors
+            Class
+            HTML tag
+        Box Model
+        Flex boxes
+        Favicons
+
+        Concepts not included:
+        Nav bars
+        ID selectors (need to change some more to be IDs)
+        -->
+
+    <header>
         <div>
-       <h1 class= "title">Spotify Data Visualizer </h1>
+            <h1 class="title">Spotify Data Visualizer</h1>
         </div>
-<img src="./logo.png" alt="Spotify Logo">
-     </header>
-
-    <section><Info-section></Info-section>
-    <div>
-         <h2> About </h2>
-         <p> Welcome to <b>Spotify Data Visualizer</b>, this project takes a large data set of music
-         information and organizes it into categories you can select </p>
-    </div>
-    <div>
-        <h2>Visualizations</h2>
-        <ul>
-            <li> Most Common Genre (Bar Graph)</li>
-            <li> Most Average Year Song Relase</li>
-            <li> Loudest Song in Decimals (Linear Graph)</li>
-        </ul>
-        <div>
-            <section>
+        <img src="./logo.png" alt="Spotify logo">
+    </header>
 
 
-                <footer>
-                    <ul>
-                        <li>
-                            <a href="https://www.linkedin.com/in/peter-martagon-341604296/">LinkedIn</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/peterm26">GitHub</a>
-                        </li>
-                    </ul>
-                </footer>
-
-
-            </section>
+    <section class="info-section">
+        <div class="left-container">
+            <h2>About</h2>
+            <p>Welcome to the <b>Spotify Data Visualizer</b>. This project takes a large data set of music information and 
+                organizes it into categories you can select!</p>
         </div>
-    </div>
+        <div class="right-container">
+            <h2>Visualizations</h2>
+            <ul>
+                <li>Most Common Genre (Bar Graph)</li>
+                <li>Most Average Year Song Release (Pie Chart)</li>
+                <li>Loudest Song in Decibles (Linear Graph)</li>
+            </ul>
+            <!-- <img src="https://icons.veryicon.com/png/o/miscellaneous/resume-breakpoint-simple-line-mark/music-435.png" alt="The spotify logo without the text"> -->
+        </div>
     </section>
+
+    <section class="result-section">
+        <div id="result-container">
+            <h2 id="result">Result</h2>
+            <div class="button-container">
+                <button class="spotify-button result-button">Most Common Genre</button>
+                <button class="spotify-button result-button">Year Song Released</button>
+                <button class="spotify-button result-button">Loudest Song</button>
+            </div>
+            <div class="result-card" id="result-card">
+                <div class="result-content">
+                    <h4 class="result-intro-text">Select a category and chart type to visualize data.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul class="social-links">
+            <li>
+                <a href="https://www.linkedin.com/in/peter-martagon-341604296">LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://github.com/peterm26">GitHub</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="script.js"></script>
 
 </body>
 </html>
